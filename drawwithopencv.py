@@ -9,8 +9,8 @@ radius = 10
 color = (255,255,255)
 pressed = False
 
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('digitClassify.avi',fourcc, 20.0, (640,480))
+#fourcc = cv2.VideoWriter_fourcc(*'XVID')
+#out = cv2.VideoWriter('digitClassify.avi',fourcc, 20.0, (640,480))
 
 def preprocess_image(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -69,11 +69,12 @@ cv2.setMouseCallback("canvas", click)
 
 while True:
     cv2.imshow("canvas", canvas)
-    screen = np.array(ImageGrab.grab(bbox=(10,10,900,900)))
+    #screen = np.array(ImageGrab.grab(bbox=(10,10,900,900)))
     #print(screen.shape)
-    resized_screen = cv2.resize(screen, (640,480), Image.ANTIALIAS)
+    #resized_screen = cv2.resize(screen, (640,480), Image.ANTIALIAS)
     #cv2.imshow("Screen", resized_screen)
-    out.write(resized_screen)
+    #out.write(resized_screen)
+    
     ch = cv2.waitKey(1)
     if ch & 0xFF == ord('q'):
         break
