@@ -32,7 +32,7 @@ def preprocess_image(img):
     tpred = resize.reshape(1,28,28,1)
     #model = keras.models.load_model("mnist_digit.h5")
     #model = keras.models.load_model("mnist_digit_convolution.h5")
-    model = keras.models.load_model('mnist_digit_convolution_with_5_ephocs.h5')
+    model = keras.models.load_model('mnist_digit_convolution_w5e.h5')
     return np.argmax(model.predict(tpred))
 
 
