@@ -8,5 +8,5 @@ Model is trained on keras to classify digits(0-9)
 </ul>
 <br/>
 It's a simple convolutional model built using Keras and trained on MNIST dataset.
-
+<br/>
 <img src ="digitClassify.gif">
